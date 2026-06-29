@@ -1,7 +1,7 @@
 use dioxus::prelude::*;
 use glam::Vec2;
 
-use crate::{components::{KATEX_MAIN, rem}, game::{Card, ColorMode, Skin}};
+use crate::{components::{KATEX_MAIN, rem}, game::ColorMode};
 
 pub trait SkinTrait<C>: PartialEq + Clone {
     fn get_color(&self, card: &C, mode: ColorMode) -> String;
