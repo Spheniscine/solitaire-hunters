@@ -13,8 +13,8 @@ pub use board::*;
 mod anim;
 pub use anim::*;
 
-// mod hero;
-// pub use hero::*;
+mod hero;
+pub use hero::*;
 
 // mod settings;
 // pub use settings::*;
@@ -22,8 +22,8 @@ pub use anim::*;
 // mod new_game;
 // pub use new_game::*;
 
-// mod local_storage;
-// pub use local_storage::LocalStorage;
+mod local_storage;
+pub use local_storage::LocalStorage;
 
 mod emoji;
 pub use emoji::*;

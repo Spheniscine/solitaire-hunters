@@ -1,7 +1,6 @@
 use dioxus::prelude::*;
-use glam::Vec2;
 
-use crate::{components::CardComponent, game::{Card, Skin, Suit}};
+use crate::components::Hero;
 
 mod game;
 mod components;
@@ -10,6 +9,9 @@ const FAVICON: Asset = asset!("/assets/favicon.ico");
 
 // altered version of KaTeX_Main to include filled "red" suits
 const KATEX_SUITS: Asset = asset!("/assets/KaTeX_Suits.woff2");
+
+// from https://www.confettijs.org/
+const CONFETTI_JS: Asset = asset!("/assets/confetti.min.js");
 
 const MAIN_CSS: Asset = asset!("/assets/main.css");
 
@@ -46,24 +48,8 @@ fn App() -> Element {
             }}
             "#,
         }
-
+        document::Script { src: CONFETTI_JS }
         Hero {}
 
-    }
-}
-
-#[component]
-pub fn Hero() -> Element {
-    rsx! {
-        div {
-            id: "hero",
-
-            CardComponent { 
-                position: Vec2::new(10., 10.),
-                width: 14.,
-                card: Card { rank: 6, suit: Suit::Spades, },
-                skin: Skin
-            }
-        }
     }
 }
