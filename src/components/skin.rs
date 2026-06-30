@@ -5,7 +5,7 @@ use crate::{components::{Emoji, SkinTrait}, game::{Card, ColorMode, Skin, Suit, 
 pub const KATEX_MAIN: &str = "KaTeX_Main";
 
 impl Skin {
-    fn render_rank_internal(&self, card: &Card, text_mode: bool) -> Element {
+    fn render_rank_internal(&self, card: &Card, _text_mode: bool) -> Element {
         if card.is_hunter() {
             rsx! { 
                 span {
@@ -25,7 +25,7 @@ impl Skin {
             }
         }
     }
-    fn render_suit_internal(&self, card: &Card, text_mode: bool) -> Element {
+    fn render_suit_internal(&self, card: &Card, _text_mode: bool) -> Element {
         if card.is_hunter() {
             let text = match card.suit.color() {
                 SuitColor::Black => "♠",
@@ -59,17 +59,17 @@ impl SkinTrait<Card> for Skin {
         self.render_rank_internal(card, false)
     }
 
-    fn render_rank_text(&self, card: &Card) -> Element {
-        self.render_rank_internal(card, true)
-    }
+    // fn render_rank_text(&self, card: &Card) -> Element {
+    //     self.render_rank_internal(card, true)
+    // }
 
     fn render_suit(&self, card: &Card) -> Element {
         self.render_suit_internal(card, false)
     }
 
-    fn render_suit_text(&self, card: &Card) -> Element {
-        self.render_suit_internal(card, true)
-    }
+    // fn render_suit_text(&self, card: &Card) -> Element {
+    //     self.render_suit_internal(card, true)
+    // }
     
     
 }

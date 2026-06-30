@@ -16,11 +16,8 @@ pub use anim::*;
 mod hero;
 pub use hero::*;
 
-// mod settings;
-// pub use settings::*;
-
-// mod new_game;
-// pub use new_game::*;
+mod settings;
+pub use settings::*;
 
 mod local_storage;
 pub use local_storage::LocalStorage;
@@ -28,8 +25,8 @@ pub use local_storage::LocalStorage;
 mod emoji;
 pub use emoji::*;
 
-// mod help;
-// pub use help::*;
+mod help;
+pub use help::*;
 
-// mod videos;
-// pub use videos::*;
+mod videos;
+pub use videos::*;
