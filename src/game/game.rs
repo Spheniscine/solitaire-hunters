@@ -171,6 +171,18 @@ impl GameState {
         }
     }
 
+    pub fn ondoubleclick(&mut self, pos: BoardPos) {
+        if self.is_busy() { return; }
+        if !self.can_select(pos) { return; } // needed, or illegal stacks can still be moved this way!
+
+        let dest = DepotRole::FreeCell.id(0);
+        let dest = BoardPos::new(dest, self.board.depots[dest].len());
+        if self.can_move(pos, dest) {
+            self.undo_stack.push(self.history.len());
+            self.do_move_raw(pos, dest);
+        }
+    }
+
     fn do_move_raw(&mut self, pos1: BoardPos, pos2: BoardPos) {
         self.board.do_move(pos1, pos2);
         self.history.push(ActionRecord { pos1, pos2 })

@@ -5,14 +5,14 @@
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="UTF-8" />
-  <link rel="preload" as="script" href="/solitaire-hunters/assets/solitaire-hunters-b0a82654701b6752.js" crossorigin><link rel="preload" as="fetch" type="application/wasm" href="/solitaire-hunters/assets/solitaire-hunters_bg-dd3fc789ff71c27f.wasm" crossorigin></head>
+  <link rel="preload" as="script" href="/solitaire-hunters/assets/solitaire-hunters-b0a82654701b6752.js" crossorigin><link rel="preload" as="fetch" type="application/wasm" href="/solitaire-hunters/assets/solitaire-hunters_bg-5b5d044aa0a8ec9e.wasm" crossorigin></head>
   <body>
     <div id="main"></div>
   <script>
             // We can't use a module script here because we need to start the script immediately when streaming
             import("/solitaire-hunters/assets/solitaire-hunters-b0a82654701b6752.js").then(
                 ({ default: init }) => {
-                init("/solitaire-hunters/assets/solitaire-hunters_bg-dd3fc789ff71c27f.wasm").then((wasm) => {
+                init("/solitaire-hunters/assets/solitaire-hunters_bg-5b5d044aa0a8ec9e.wasm").then((wasm) => {
                     if (wasm.__wbindgen_start == undefined) {
                     wasm.main();
                     }
