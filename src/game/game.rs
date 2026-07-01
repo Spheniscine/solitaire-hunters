@@ -173,6 +173,7 @@ impl GameState {
 
     pub fn ondoubleclick(&mut self, pos: BoardPos) {
         if self.is_busy() { return; }
+        if self.is_won() { return; }
         if !self.can_select(pos) { return; } // needed, or illegal stacks can still be moved this way!
 
         let dest = DepotRole::FreeCell.id(0);
