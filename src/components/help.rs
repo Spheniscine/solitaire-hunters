@@ -34,7 +34,12 @@ pub fn Help(game_state: Signal<GameState>) -> Element {
                             span {
                                 font_family: KATEX_MAIN,
                                 font_size: "1.2em",
-                                "1~5"
+                                "1"
+                            }, "~", 
+                            span {
+                                font_family: KATEX_MAIN,
+                                font_size: "1.2em",
+                                "5"
                             }, ", 2 suits, 2 copies each."
                         },
                         li { "16 ", Emph{"animal"}, " cards: 4 kinds, 4 copies each."
