@@ -48,7 +48,7 @@ pub fn Help(game_state: Signal<GameState>) -> Element {
                 }
 
                 p {
-                    Emph{"Hunter"}," cards stack by ",Emph{"alternating suit"}," and ",Emph{"descending rank"},
+                    Emph{"Hunter"}," cards stack by ",Emph{"alternating suit"}," and ",Emph{"decrementing rank"},
                     ", and can be moved together as a stack of any size."
                 }
 
